@@ -1,0 +1,28 @@
+[package]
+name = "fcpy"
+version = "0.0.1"
+edition = "2021"
+authors = ["Thomas Almeida <hi@thomasalmeida.com>"]
+description = "Fast command-line file concatenator with smart filtering, recursive scanning, and clipboard integration."
+license = "MIT"
+repository = "https://github.com/thomasalmeida/fcpy"
+readme = "README.md"
+keywords = ["cli", "files", "productivity"]
+categories = ["command-line-utilities"]
+
+[features]
+dev = ["anyhow/backtrace"]
+
+[dependencies]
+anyhow = "1.0"
+clap = { version = "4.4", features = ["derive"] }
+encoding_rs = "0.8"
+globset = "0.4"
+walkdir = "2.4"
+thiserror = "1.0"
+
+[dev-dependencies]
+tempfile = "3.8"
+assert_cmd = "2.0"
+predicates = "3.0"
+
